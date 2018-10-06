@@ -7,7 +7,8 @@ import core.Problem;
 public class Algorithm
 {
   public static String[] modes = {
-    "etc.MaximumSubarray"
+    "etc.MaximumSubarray",
+    "sort.HeapSort"
   };
 
   public static void main(String[] args) {

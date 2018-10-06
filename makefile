@@ -54,7 +54,8 @@ FILE=
 CLASSES = \
 	Algorithm.java \
 	core/*.java \
-	etc/*.java
+	etc/*.java \
+	sort/*.java
 
 #
 # MAIN is a variable with the name of the file containing the main method
@@ -97,3 +98,4 @@ clean:
 	$(RM) *.class
 	$(RM) core/*.class
 	$(RM) etc/*.class
+	$(RM) sort/*.class
