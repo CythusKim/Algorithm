@@ -1,24 +1,36 @@
+package etc;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class MaximumSubarray
-{
-  public static void main(String[] args) {
-    Integer[] arr = {13,-3,-25,20,-3,-16,-23,18,20,-7,12,-5,-22,15,-4,7};
-    ArrayList<Integer> arrlist = new ArrayList<Integer>(Arrays.asList(arr));
+import core.Problem;
 
-    System.out.println(arrlist.toString());
-    System.out.println(maxRange(arrlist));
+public class MaximumSubarray implements Problem<ArrayList<Integer>, ArrayList<Integer>>
+{
+  public ArrayList<Integer> solve(ArrayList<Integer> input)
+  {
+    return maxRange(input);
   }
 
-  public static ArrayList<Integer> maxRange(ArrayList<Integer> arr)
+  public ArrayList<Integer> generateInputExample()
+  {
+    Integer[] arr = {13,-3,-25,20,-3,-16,-23,18,20,-7,12,-5,-22,15,-4,7};
+    return new ArrayList<Integer>(Arrays.asList(arr));
+  }
+
+  public String specification()
+  {
+    return "Maximum Subarray Problem";
+  }
+
+  protected ArrayList<Integer> maxRange(ArrayList<Integer> arr)
   {
     if (arr.size() == 0)
       return null;
     else if (arr.size() == 1)
     {
       if (arr.get(0) >= 0)
-        return (ArrayList<Integer>) arr.clone();
+        return new ArrayList<Integer>(arr);
       else
         return null;
     }
@@ -43,7 +55,7 @@ public class MaximumSubarray
     }
   }
 
-  public static ArrayList<Integer> maxRangeFromEnd(ArrayList<Integer> arr)
+  protected ArrayList<Integer> maxRangeFromEnd(ArrayList<Integer> arr)
   {
     int maxSum = 0;
     int maxIndex = arr.size();
