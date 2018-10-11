@@ -14,3 +14,4 @@ For example, if you want to execute Heapsort algorithm, type "java Algorithm 2".
 # Table of Contents
 1. Maximum Subarray Problem
 2. Heapsort
+3. CountingSort

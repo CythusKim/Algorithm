@@ -8,7 +8,8 @@ public class Algorithm
 {
   public static String[] modes = {
     "etc.MaximumSubarray",
-    "sort.HeapSort"
+    "sort.HeapSort",
+    "sort.CountingSort"
   };
 
   public static void main(String[] args) {
